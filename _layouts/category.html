@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section class="mt-4 mb-5">
+  <div class="container mb-4">
+  	<h1 class="font-weight-bold title">{{ page.name | capitalized }}</h1>
+  	<p>{{ page.description }}</p>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+	    <div class="card-columns">
+  
+    {%- assign filtered_posts = site.posts | where: 'category', page.short_name -%}
+    {%- if filtered_posts.size > 0 -%}
+        
+        {% for post in filtered_posts %}
+          <div class="card card-pin">
+      		  {%- if post.image -%}
+      				<img class="card-img" loading="lazy" src="{{ post.image }}" alt="{{ post.title }}'s Featured Photo">
+      			{%- else -%}
+      				<img class="card-img" loading="lazy" src="{{ site.baseurl | prepend: site.baseurl | prepend: site.url }}/assets/img/off.jpg" alt="No Featured Photo Available">
+      			{%- endif -%}
+      				<div class="overlay">
+      					<h2 class="card-title title">{{ post.title }}</h2>
+      					<div class="more">
+      						<a href='{{ post.url | prepend: site.baseurl | prepend: site.url }}'>
+      						<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+      					</div>
+      				</div>
+      			</div>
+        {% endfor %}
+  
+        {%- else -%}
+  
+        <div class="card card-pin">
+      	  <h4 class="card-title title">There Is Currently No Post Available</h4>
+        </div>
+  
+    {%- endif -%}
+  		</div>
+  	</div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+layout: page
+title: Members
+description: Meet our respective Members and content creators of 2HAAS Family..
+---
+<div class="container mb-4">
+	<h1 class="font-weight-bold title">{{ "Members" | capitalized }}</h1>
+	<p>Members of 2HAAS..</p>
+</div>
+<div class="row">
+{%- for author in site.authors -%}
+	<div class="col-sm-4">
+	  <div class="team-member">
+		<img class="rounded-circle" src="{{ author.profile_image }}" alt="{{author.name}}'s profile picture" width="228">
+		<a href="{{ author.url | prepend: site.baseurl | prepend: site.url }}">
+		  <h4>{{ author.name }}</h4>
+		</a>
+		<p class="text-muted">{{ author.position }}</p>
+	  </div>
+	</div>
+ {% endfor %}
+  </div>

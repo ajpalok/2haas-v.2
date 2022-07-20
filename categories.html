@@ -1,0 +1,21 @@
+---
+layout: page
+title: Categories
+description: Here comes our list of Categories of 2HAAS's posts..
+---
+<div class="container mb-4">
+	<h1 class="font-weight-bold title">{{ "Categories" | capitalized }}</h1>
+	<p>Categories of 2HAAS..</p>
+</div>
+
+<table>
+  {% for category in site.categories %}
+  <tr>
+    <td>
+      <a href="{{ category.url }}">
+        <p class="h4">{{ category.name }}</p>
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

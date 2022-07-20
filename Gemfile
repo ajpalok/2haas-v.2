@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "jekyll"
+gem "webrick"
+gem "rouge"
+gem "json"
+# gem "kramdown-parser-gfm"
+gem "kramdown"

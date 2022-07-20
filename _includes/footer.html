@@ -1,0 +1,65 @@
+<footer class="footer pt-5 pb-5 text-center">
+    
+<div class="container">
+    
+      <div class="socials-media">
+
+        <ul class="list-unstyled">
+          {% if site.github_username %}
+          <li class="d-inline-block ml-1 mr-1"><a href="https://github.com/{{ site.github_username }}" title="Github" class="text-dark"><i class="fa fa-github"></i></a></li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li class="d-inline-block ml-1 mr-1"><a href="https://facebook.com/{{ site.facebook_username }}" title="Facebook" class="text-dark"><i class="fa fa-facebook"></i></a></li>
+          {% endif %}
+          {% if site.instagram_username %}
+          <li class="d-inline-block ml-1 mr-1"><a href="https://instagram.com/{{ site.instagram_username }}" title="Instagram" class="text-dark"><i class="fa fa-instagram"></i></a></li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li class="d-inline-block ml-1 mr-1"><a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter" class="text-dark"><i class="fa fa-twitter"></i></a></li>
+          {% endif %}
+          {% if site.youtube_username %}
+          <li class="d-inline-block ml-1 mr-1"><a href="https://youtube.com/{{ site.youtube_username }}" title="YouTube" class="text-dark"><i class="fa fa-youtube"></i></a></li>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <li class="d-inline-block ml-1 mr-1"><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn" class="text-dark"><i class="fa fa-linkedin"></i></a></li>
+          {% endif %}
+        </ul>
+
+      </div>
+      
+      <div class="row">
+        <div class="col-4 mb-4">
+	  <p class="h5"><u>Links:</u></p>
+          <p><a href="{{site.baseurl | prepend: site.url}}">Home</a></p>
+          <p><a href="{{site.baseurl | prepend: site.url}}/about/">About</a></p>
+          <p><a href="{{site.baseurl | prepend: site.url}}/contact/">Contact</a></p>
+          <p><a href="{{site.baseurl | prepend: site.url}}/sitemap/">Sitemap</a></p>
+        </div>
+        <div class="col-4 mb-4">
+	  <p class="h5"><u>Our Sites:</u></p>
+	  <p><a href="https://mosfism.2haas.com">Mosfism</a></p>
+          <p><a href="https://jekyll.2haas.com">Website Templates</a></p>
+	  <p><a href="https://ditf.2haas.com">Darling In The Franxx</a></p>
+	</div>
+        <div class="col-4 mb-4">
+	  <p class="h5"><u>TOS:</u></p>
+          <p><a href="{{ site.baseurl | prepend: site.url }}/policy/">Policy</a></p>
+          <p><a href="{{ site.baseurl | prepend: site.url }}/cookie-policy/">Cookie Policy</a></p>
+          {% unless site.ads_id %}
+          <p><a href="{{ site.baseurl | prepend: site.url }}/policy#privacy-policy">Privacy Policy</a></p>
+          {% endunless %}
+          <p><a href="{{ site.baseurl | prepend: site.url }}/disclaimer/">Disclaimer</a></p>
+          <p><a href="{{ site.baseurl | prepend: site.url }}/terms-conditions/">Terms and Conditions</a></p>
+        </div>
+      </div>
+      
+      <p>©  <span class="credits font-weight-bold">        
+        <a target="_blank" class="text-dark" href="{{site.baseurl | prepend: site.url}}"><u>{{ 'now' | date: "%Y" }}</u> {{ site.name }}</a>
+      </span>
+      </p>
+
+    </div>
+    
+</footer>
+
+{% include footerjs.html %}
