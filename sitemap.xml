@@ -3,19 +3,6 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in site.pages %}
-        <url>
-            <loc>{{ page.url | prepend: site.baseurl | prepend: site.url }}</loc>
-            {% if page.layout == 'home' %}
-                <changefreq>weekly</changefreq>
-                <priority>1</priority>
-                <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-            {% else %}
-                <changefreq>monthly</changefreq>
-                <priority>0.5</priority>
-            {% endif %}
-        </url>
-    {% endfor %}
     {% for post in site.posts %}
         <url>
             <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
@@ -30,5 +17,20 @@ layout: null
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
+    {% endfor %}
+    {% for page in site.pages %}
+    {% unless page.url == "/404.html" or page.url == "/Worker.js" or page.url == "/sitemap.xml" %}
+        <url>
+            <loc>{{ page.url | prepend: site.baseurl | prepend: site.url }}</loc>
+            {% if page.layout == 'home' %}
+                <changefreq>weekly</changefreq>
+                <priority>1</priority>
+                <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+            {% else %}
+                <changefreq>monthly</changefreq>
+                <priority>0.5</priority>
+            {% endif %}
+        </url>
+    {% endunless %}
     {% endfor %}
 </urlset>
