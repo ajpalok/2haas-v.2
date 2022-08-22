@@ -5,11 +5,16 @@
   box-sizing: border-box;
   font-family: 'Squada One';
   scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   /* border: 1px solid red; */
 }
 ::selection{
   color: black;
   background: rgb(230,245,255);
+}
+::-webkit-scrollbar {
+  display: none;
 }
 html, body {
   width: 100%;
@@ -197,9 +202,10 @@ html, body {
   align-items: center;
 }
 .ads{
-  width: 50%;
+  width: 70%;
   aspect-ratio: 1/1;
   margin-top: 1rem;
+  border-radius: 1.5rem;
   background: linear-gradient(
                 rgba(0,0,0,0.2),
                 rgba(0,0,0, 0.7)
