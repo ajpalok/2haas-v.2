@@ -158,3 +158,18 @@ progress_bar.addEventListener("click", (e) => {
 sound_button.addEventListener("click", () => {
   play_now ? pauseMusic() : playMusic();
 });
+
+
+/* ads sizing */
+let support = document.getElementById("support");
+let support_size = support.getBoundingClientRect().width;
+
+/* Insert values on first time load of page */
+window.onload = function() {
+  support.setAttribute('style',`display:inline-block;width:${support_size}px;height:${support_size}px`);
+};
+   
+/* Change values when window is resized */
+window.onresize = function() {
+  support.setAttribute('style',`display:inline-block;width:${support_size}px;height:${support_size}px`);
+};
