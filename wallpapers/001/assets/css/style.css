@@ -12,7 +12,6 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  /* border: 1px solid red; */
 }
 ::selection{
   color: black;
@@ -73,9 +72,9 @@ html, body {
   margin: .625rem;
   scroll-snap-type: y mandatory;
   overflow-y: auto;
-  border: 10px solid #000;
+  border: 10px solid var(--full-black);
   border-radius: 2.8125rem;
-  background-color: #000000;
+  background-color: var(--full-black);
   box-shadow: -3.125rem 3.125rem 1.25rem #303030;
 }
 .mobile section{
@@ -210,7 +209,6 @@ html, body {
   width: 170px;
   aspect-ratio: 1/1;
   margin-top: 1rem;
-  border-radius: 1.5rem;
   background: linear-gradient(
                 rgba(0,0,0,0),
                 rgba(0,0,0,0.2),
