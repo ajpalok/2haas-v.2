@@ -7,6 +7,6 @@ description: Never give up. Try ourself to do the best. Non has the ability to d
 position: Chief Editor
 email: palok1969@gmail.com
 facebook_username: ajpalok.fb
-twitter_username: aj_palok
+twitter_username: ajpalok
 instagram_username: ajpalok_insta
 ---
