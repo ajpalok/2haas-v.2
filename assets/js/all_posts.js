@@ -26,7 +26,7 @@ $(document).ready(function(){
 			var signatory_url = val.url;
 			var signatory_image = val.image_url;
 
-			var signatory_card = '<div class="card card-pin"><img class="card-img" loading="lazy" src="' + signatory_image + '" alt="' + signatory_name + '"><div class="overlay"><h2 class="card-title title">"' + signatory_name + '"</h2><div class="more"><a href="' + signatory_url + '"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a></div></div><div>';
+			var signatory_card = '<div class="card card-pin mb-2 mx-auto" style="max-width:300px;"><img class="card-img" loading="lazy" src="' + signatory_image + '" alt="' + signatory_name + '"><div class="overlay"><h2 class="card-title title">"' + signatory_name + '"</h2><div class="more"><a href="' + signatory_url + '"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a></div></div><div>';
 
 			signatories_mold.push(signatory_card);
 			signatories_in_array_count += 1;
