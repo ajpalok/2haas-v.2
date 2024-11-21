@@ -90,5 +90,3 @@ compress_html:
   profile: false
   startings: []
 
-include:
-  - .htaccess
