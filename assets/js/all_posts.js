@@ -15,7 +15,7 @@ $(document).ready(function(){
 	var scrollTolerance = 700; /* Define range of pixels between scroll position and bottom page as a tolerance to trigger the function */
 	var elementsToAppendPerScroll = 7; /* Define the elements to index when user reach bottom of the site */
 
-	$.getJSON( "/assets/json/all_posts.json", function(data) {
+	$.getJSON( "{{site.baseurl | prepend: site.url}}/assets/json/all_posts.json", function(data) {
 	/*	console.log("json data: " + data.signatories.length); */
 		signatories_in_json = data.signatories.length;
 

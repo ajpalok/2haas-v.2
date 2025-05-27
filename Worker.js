@@ -3,12 +3,12 @@ layout: compress
 ---
 const static2HAAS = '2HAAS-cache-v1';
 const assets = [
-  '/assets/img/off.jpg',
-  '/assets/img/404.gif',
-  '/assets/img/loading.gif',
-  '/assets/img/contact.jpg',
-  '/assets/img/blog-image.png',
-  '/assets/img/message.gif'
+  '{{site.baseurl | prepend: site.url}}/assets/img/off.jpg',
+  '{{site.baseurl | prepend: site.url}}/assets/img/404.gif',
+  '{{site.baseurl | prepend: site.url}}/assets/img/loading.gif',
+  '{{site.baseurl | prepend: site.url}}/assets/img/contact.jpg',
+  '{{site.baseurl | prepend: site.url}}/assets/img/blog-image.png',
+  '{{site.baseurl | prepend: site.url}}/assets/img/message.gif'
 ];
 self.addEventListener('install', evt => {
   evt.waitUntil(

@@ -27,7 +27,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
     return gulp.src(['src/assets/scss/*.scss'])
         .pipe(sourcemaps.init())
-        .pipe(sass({ 
+        .pipe(sass({
             outputStyle: 'expanded',
             sourceComments: 'map',
             sourceMap: 'sass',
@@ -69,7 +69,7 @@ gulp.task('watch', ['sass'], function () {
     browserSync.init({
         server: "./docs"
     });
-    
+
     gulp.watch(['src/assets/js/vendors/*.js'], ['scripts', browserSync.reload]);
     gulp.watch(['src/assets/js/*.js'], ['compile-js', browserSync.reload]);
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/assets/scss/**/*'], ['sass', browserSync.reload]);
@@ -99,9 +99,9 @@ gulp.task('media', function () {
 // Places font files in the docs folder
 gulp.task('font', function () {
     return gulp.src([
-            'src/assets/fonts/*.eot', 
-            'src/assets/fonts/*.woff', 
-            'src/assets/fonts/*.ttf', 
+            'src/assets/fonts/*.eot',
+            'src/assets/fonts/*.woff',
+            'src/assets/fonts/*.ttf',
             'src/assets/fonts/*.otf'
         ])
         .pipe(gulp.dest("docs/assets/fonts"))
@@ -113,9 +113,9 @@ gulp.task('font', function () {
 gulp.task('scripts', function () {
     // jQuery first, then Popper.js, then Bootstrap JS, then other JS libraries, and last app.js
     return gulp.src([
-            'src/assets/js/vendors/jquery.min.js', 
-            'src/assets/js/vendors/popper.min.js', 
-            'src/assets/js/vendors/bootstrap.min.js', 
+            'src/assets/js/vendors/jquery.min.js',
+            'src/assets/js/vendors/popper.min.js',
+            'src/assets/js/vendors/bootstrap.min.js',
             'src/assets/js/app.js'
         ])
         .pipe(sourcemaps.init())
@@ -127,7 +127,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('compile-js', function() {
-  return gulp.src(['src/assets/js/theme.js'])    
+  return gulp.src(['src/assets/js/theme.js'])
     .pipe(gulp.dest('docs/assets/js/'));
     console.log('Compile theme.js');
 });
